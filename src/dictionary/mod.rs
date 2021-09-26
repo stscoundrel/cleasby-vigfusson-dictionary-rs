@@ -8,7 +8,7 @@ const DICTIONARY_PATH: &str = "src/dictionary/dataset/cleasby-vigfusson.json";
 pub fn get_dictionary_dataset() -> Result<Vec<DictionaryEntry>, &'static str> {
     let contents = reader::read_json_file(String::from(DICTIONARY_PATH)).unwrap();
 
-    return match serde_json::from_str(&contents){
+    match serde_json::from_str(&contents){
         Ok(entries) => Ok(entries),
         Err(_e) => Err("Failed to serialize dictionary to DictionaryEntries"),
     }
