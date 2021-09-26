@@ -1,12 +1,12 @@
 [package]
-name = "cleasby-vigfusson-dictionary"
-version = "0.1.0"
+name = "cleasby_vigfusson_dictionary"
+version = "1.0.0"
 authors = ["stscoundrel / Sampo Silvennoinen"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/stscoundrel/cleasby-vigfusson-dictionary-rs"
 description = """
-Add definition here
+The Cleasby/Vigfusson Old Norse to English Dictionary for Rust
 """
 edition = "2018"
 
