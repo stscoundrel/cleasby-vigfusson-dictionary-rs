@@ -1,12 +1,12 @@
 mod dictionary_entry;
+mod dictionary_location;
 use dictionary_entry::DictionaryEntry;
+use dictionary_location::DictionaryLocation;
 use crate::reader;
 use serde_json;
 
-const DICTIONARY_PATH: &str = "src/dictionary/dataset/cleasby-vigfusson.json";
-const NO_MARKUP_DICTIONARY_PATH: &str = "src/dictionary/dataset/cleasby-vigfusson-no-markup.json";
-
-fn get_dictionary_dataset(dictionary_path: String) -> Result<Vec<DictionaryEntry>, &'static str> {
+fn get_dictionary_dataset(dictionary_location: DictionaryLocation) -> Result<Vec<DictionaryEntry>, &'static str> {
+    let dictionary_path = dictionary_location.get_path();
     let contents = reader::read_json_file(dictionary_path).unwrap();
 
     match serde_json::from_str(&contents){
@@ -16,11 +16,11 @@ fn get_dictionary_dataset(dictionary_path: String) -> Result<Vec<DictionaryEntry
 }
 
 pub fn get_dictionary() -> Result<Vec<DictionaryEntry>, &'static str> {
-    get_dictionary_dataset(String::from(DICTIONARY_PATH))
+    get_dictionary_dataset(DictionaryLocation::MarkupDictionary)
 }
 
 pub fn get_no_markup_dictionary() -> Result<Vec<DictionaryEntry>, &'static str> {
-    get_dictionary_dataset(String::from(NO_MARKUP_DICTIONARY_PATH))
+    get_dictionary_dataset(DictionaryLocation::NoMarkupDictionary)
 }
 
 #[cfg(test)]
