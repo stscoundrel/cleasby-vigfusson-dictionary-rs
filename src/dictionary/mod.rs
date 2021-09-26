@@ -3,7 +3,6 @@ mod dictionary_location;
 use dictionary_location::DictionaryLocation;
 pub use dictionary_entry::DictionaryEntry;
 use crate::reader;
-use serde_json;
 
 fn get_dictionary_dataset(dictionary_location: DictionaryLocation) -> Result<Vec<DictionaryEntry>, &'static str> {
     let dictionary_path = dictionary_location.get_path();
