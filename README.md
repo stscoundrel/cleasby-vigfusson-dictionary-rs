@@ -4,6 +4,8 @@ The Cleasby &amp; Vigfusson Old Norse to English Dictionary for Rust. The dictio
 
 Based on the classic dictionary by Richard Cleasby and Gudbrand Vigfusson.
 
+## WORK IN PROGRESS
+
 
 ### Install
 
