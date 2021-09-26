@@ -1,5 +1,5 @@
 [package]
-name = "cleasby-vigfusson-dictionary"
+name = "cleasby_vigfusson_dictionary"
 version = "1.0.0"
 authors = ["stscoundrel / Sampo Silvennoinen"]
 license = "MIT"
