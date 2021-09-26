@@ -1,10 +1,10 @@
 [package]
-name = "template"
-version = "1.0.0"
+name = "cleasby-vigfusson-dictionary"
+version = "0.1.0"
 authors = ["stscoundrel / Sampo Silvennoinen"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/stscoundrel/rust-template"
+repository = "https://github.com/stscoundrel/cleasby-vigfusson-dictionary-rs"
 description = """
 Add definition here
 """
