@@ -9,7 +9,7 @@ pub fn read_json_file(filename: String) -> Result<String, &'static str> {
     if is_json_file(&filename) {
         return match read_to_string(&filename) {
             Ok(text) => Ok(text),
-            Err(e) => Err("Could not read the given JSON file"),
+            Err(_e) => Err("Could not read the given JSON file"),
         }
     }
 
