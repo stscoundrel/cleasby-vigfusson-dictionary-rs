@@ -1,4 +1,5 @@
-pub mod reader;
+mod reader;
+pub mod dictionary;
 
 pub fn template_function(x: i32) -> i32 {
     x * x
