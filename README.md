@@ -4,6 +4,18 @@ The Cleasby &amp; Vigfusson Old Norse to English Dictionary for Rust. The dictio
 
 Based on the classic dictionary by Richard Cleasby and Gudbrand Vigfusson. Also available for [Node.js](https://github.com/stscoundrel/cleasby-vigfusson-dictionary)
 
+
+### Install
+
+`cargo add cleasby_vigfusson_dictionary`
+
+Or add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+cleasby-vigfusson-dictionary = "1.1.0"
+```
+
 ### Usage
 
 Dictionary comes in two variants: one with html markup, and one without.
@@ -26,15 +38,6 @@ let no_markup_dictionary_content: Vec<DictionaryEntry> = no_markup_dictionary.un
 println!("A word from dictionary: {}. First definition for it is: {}", &dictionary_content[0].word, &dictionary_content[0].definitions[0])
 ```
 
-
-### Install
-
-Add this to your `Cargo.toml`:
-
-```toml
-[dependencies]
-cleasby-vigfusson-dictionary = "1.0.0"
-```
 
 ### About Cleasby & Vigfusson Dictionary
 
