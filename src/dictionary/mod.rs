@@ -2,13 +2,11 @@ mod dictionary_entry;
 mod dictionary_location;
 use dictionary_location::DictionaryLocation;
 pub use dictionary_entry::DictionaryEntry;
-use crate::reader;
 
 fn get_dictionary_dataset(dictionary_location: DictionaryLocation) -> Result<Vec<DictionaryEntry>, &'static str> {
-    let dictionary_path = dictionary_location.get_path();
-    let contents = reader::read_json_file(dictionary_path).unwrap();
+    let contents = dictionary_location.get_dictionary_json();
 
-    match serde_json::from_str(&contents){
+    match serde_json::from_str(contents){
         Ok(entries) => Ok(entries),
         Err(_e) => Err("Failed to serialize dictionary to DictionaryEntries"),
     }

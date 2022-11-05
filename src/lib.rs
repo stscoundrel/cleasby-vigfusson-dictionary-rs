@@ -1,4 +1,3 @@
-mod reader;
 mod dictionary;
 
 // Dictionary type which may be needed.
